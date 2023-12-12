@@ -1,0 +1,68 @@
+<!-- THIS FILE IS REPRESENTING THE HABIT LIST OF THE APPLICATION WHERE USER CAN SEE ALL THE ADDED HABITS  -->
+<h2><i class="bi bi-list-task"></i> My Habits</h2>
+<!-- CHECKING IF THE HABIT IS ALREADY PRESENT, IF PRESENT THEN SHOW THIS NOTIFICATION  -->
+<% if(exists){ %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Unable to add the habit - Habit already exists.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <%}%>
+
+        <!-- THIS TABLE IS CONTAINING ALL THE HABIT ADDED BY THE USER -->
+        <div class="my-habit-table">
+
+            <table class="table  ">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <h4>#</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Habit</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Note</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Record</h4>
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- LOOPING OVER THE HABIT ARRAY AND CREATING A SEPERAT ROW FOT EACH HABIT -->
+                    <% if(habitArray){ %>
+
+                        <% for(i in habitArray){ %>
+
+                            <tr>
+                                <th scope="row">
+                                    <h4>
+                                        <%=Number(i)+1+"."%>
+                                    </h4>
+                                </th>
+                                <td>
+                                    <h5>
+                                        <%=habitArray[i].habit%>
+                                    </h5>
+                                </td>
+                                <td>
+                                    <p>
+                                        <%=habitArray[i].note%>
+                                    </p>
+                                </td>
+                                <td>
+                                    <!-- BUTTON TO NAVIGATE TO THE 7 DAYS RECORD OF THE SPECIFIC HABIT -->
+                                    <a href="/record/<%=habitArray[i]._id%>"> <i class="bi bi-calendar-event"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <% }%>
+
+                                <% }%>
+
+                </tbody>
+            </table>
+
+        </div>

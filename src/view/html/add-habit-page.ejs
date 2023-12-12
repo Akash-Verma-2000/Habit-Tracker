@@ -1,0 +1,27 @@
+<!-- THIS PAGE IS REPEATING THE ADD HABIT PAGE  -->
+<div class="row home-page">
+    <div class="col-md-4">
+        <img src="../images/background.jpg" alt="Backgroud-Image" id="Home-Page-Image">
+    </div>
+    <div class=" col-md-6">
+        <h1><i class="bi bi-plus-square"></i> Add New Habit</h1>
+        <!-- THIS FORM IS POSTING THE FORM DATA TO THE BELOW ROUTE  -->
+        <form action="/add-habit" method="post" class="mt-5 mb-5">
+            <div class="mb-5">
+                <!-- INPUT FIELD FOR HABIT NAME  -->
+                <label for="habit" class="form-label">Habit Name</label>
+                <input type="text" class="form-control" id="habit" name="habit" placeholder="Type habit name here"
+                    required>
+            </div>
+            <div class="mb-3">
+                <!-- INPUT FIELD FOR A SHORT NOTE ABOUT THE HABIT -->
+                <label for="note" class="form-label">Note</label>
+                <input type="text" class="form-control" id="note" name="note" placeholder="Give a short note" required>
+            </div>
+            <!-- THIS BUTTON SUBMITS THE FORM TO THE SEREVER -->
+            <button type="submit" class=" btn my-btn">Add Habit</button>
+        </form>
+
+
+    </div>
+</div>

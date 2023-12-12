@@ -1,0 +1,18 @@
+{
+    "name": "habit-tracker",
+    "version": "1.0.0",
+    "description": "This is an intutive Habit Tracker Application designed simplify habit management effortlessly.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Akash Verma",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.9",
+        "express": "^4.18.2",
+        "express-ejs-layouts": "^2.5.1",
+        "mongoose": "^8.0.2"
+    },
+    "type": "module"
+}

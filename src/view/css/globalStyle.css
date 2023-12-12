@@ -1,0 +1,167 @@
+/* THESE ARE SOME COMMON STYLES, APPLICABLE FOR ALL WEB PAGES => STARTS *********** */
+.my-btn {
+    text-decoration: none !important;
+    border: 1px solid #00FCA8 !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+    color: #00FCA8 !important;
+    margin: 10px !important;
+}
+
+.my-btn:hover {
+    background-color: #041C32 !important;
+    color: #00FCA8 !important;
+}
+
+h1,
+h2 {
+    color: #00FCA8;
+    margin-bottom: 50px;
+}
+
+h4 {
+    color: #ECB365;
+}
+
+h5,
+p,
+label {
+    color: #1CDAFF !important;
+}
+
+a {
+    color: #00FCA8 !important;
+    font-size: larger;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1CDAFF !important;
+}
+
+/* THESE ARE SOME COMMON STYLES, APPLICABLE FOR ALL WEB PAGES => ENDS *********** */
+
+/* THIS STYLE IS FOR LAYOUTPART => START ***********************/
+body {
+    background-color: #04293A;
+}
+
+nav {
+    background-color: #041C32;
+    border-bottom: 2px solid #00FCA8;
+    position: fixed !important;
+    top: 0px;
+    width: 100%;
+}
+
+#logo {
+    height: 50px;
+}
+
+.menu-button {
+    color: #00FCA8 !important;
+    outline: 2px solid #00FCA8;
+}
+
+.my-content-section {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+/* THIS STYLE IS FOR LAYOUTPART => ENDS ***********************/
+
+/* THIS STYLE IS FOR HOME PAGE => STARTS **********************/
+
+#Home-Page-Image {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-para {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* THIS STYLE IS FOR HOME PAGE => ENDS **********************/
+
+/* THIS STYLE IS FOR LIST PAGE  => STARTS **********************/
+.my-habit-table {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #00FCA8;
+    border-radius: 8px;
+    text-align: center;
+}
+
+th,
+td {
+    background-color: #04293A !important;
+    border-bottom: 2px solid #00FCA8;
+}
+
+.my-habit-table table thead tr th h4 {
+    font-size: larger !important;
+}
+
+.my-habit-table table tbody tr th h4 {
+    font-size: larger !important;
+}
+
+@media screen and (max-width: 576px) {
+    .my-habit-table {
+        border-right: 0px;
+        border-left: 0px;
+    }
+
+    .my-habit-table table thead tr th h4 {
+        font-size: 14px !important;
+    }
+
+    .my-habit-table table tbody tr th h4 {
+        font-size: 14px !important;
+    }
+
+    .my-habit-table table tbody tr td h5 {
+        font-size: 14px !important;
+    }
+
+    .my-habit-table table tbody tr td p {
+        font-size: 12px !important;
+    }
+}
+
+/* THIS STYLE IS FOR LIST PAGE  => ENDS **********************/
+
+/* THIS STYLE IS FOR RECORD PAGE  => STARTS **********************/
+.done {
+    font-size: xx-large;
+    color: greenyellow;
+}
+
+.not-done {
+    font-size: xx-large;
+    color: red;
+}
+
+.none {
+    font-size: xx-large;
+}
+
+@media screen and (max-width: 576px) {
+
+    .none,
+    .done,
+    .not-done {
+        font-size: large;
+    }
+}
+
+
+/* THIS STYLE IS FOR RECORD PAGE  => ENDS **********************/

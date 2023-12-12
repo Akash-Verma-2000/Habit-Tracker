@@ -1,0 +1,130 @@
+<!-- THIS FILE IS REPRESENTING THE TABLE FOR THE 7 DAYS RECORD OF A HABIT -->
+
+<!-- PUTTING THE NAME OF THE HABIT -->
+<h2>
+    <i class="bi bi-journal"></i>
+    <%=habitObj.habit%>
+</h2>
+<!-- CURRENT DATE  -->
+<p id="todays-date"></p>
+
+<!-- THIS DIV IS GIVING THE BEAUTIFULL BORDER TO THE TABLE  -->
+<div class=" my-habit-table ">
+    <!-- TABLE FOR THE 7 DAYS RECORD -->
+    <table class="table">
+        <thead>
+            <!-- IN THIS ROW WE ARE PUTTING THE WEEK DAYS IN THE CORRECT SEQUENCE USING RECORD-PAGE.JS FILE -->
+            <tr>
+                <th>
+                    <h4 id="0">MON</h4>
+                </th>
+                <th>
+                    <h4 id="1">TUE</h4>
+                </th>
+                <th>
+                    <h4 id="2">WED</h4>
+                </th>
+                <th>
+                    <h4 id="3">THU</h4>
+                </th>
+                <th>
+                    <h4 id="4">FRI</h4>
+                </th>
+                <th>
+                    <h4 id="5">SAT</h4>
+                </th>
+                <th>
+                    <h4 id="6">SUN</h4>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- ROW FOR CHANGING STATUS ICONS WITH REQUEST TO CHANGE STATUS -->
+                <!-- REPEATING THE TASK FOR EACH TABLE DATA -->
+                <td>
+                    <a href="/change-status/<%=habitObj._id%>?day=0">
+                        <!-- CHECKING AND DISPLAYING ICON FOR NONE STATUS -->
+                        <%if(habitObj.status[0]=="none"){%>
+                            <i class="bi bi-square none"></i>
+                            <!-- CHECKING AND DISPLAYING ICON FOR NOT-DONE STATUS -->
+                            <%}else if(habitObj.status[0]=="not-done" ){%>
+                                <i class="bi bi-x-circle not-done"></i>
+                                <!-- CHECKING AND DISPLAYING ICON FOR DONE STATUS -->
+                                <%}else if(habitObj.status[0]=="done" ){%>
+                                    <i class="bi bi-check2-circle done"></i>
+                                    <%}%>
+                    </a>
+                </td>
+                <!-- REPEATING SIMILAR TASK FOR OTHER DAYS -->
+                <td>
+                    <a href="/change-status/<%=habitObj._id%>?day=1">
+                        <%if(habitObj.status[1]=="none"){%>
+                            <i class="bi bi-square none"></i>
+                            <%}else if(habitObj.status[1]=="not-done" ){%>
+                                <i class="bi bi-x-circle not-done"></i>
+                                <%}else if(habitObj.status[1]=="done" ){%>
+                                    <i class="bi bi-check2-circle done"></i>
+                                    <%}%>
+                    </a>
+                </td>
+                <td>
+                    <a href="/change-status/<%=habitObj._id%>?day=2">
+                        <%if(habitObj.status[2]=="none"){%>
+                            <i class="bi bi-square  none"></i>
+                            <%}else if(habitObj.status[2]=="not-done" ){%>
+                                <i class="bi bi-x-circle not-done"></i>
+                                <%}else if(habitObj.status[2]=="done" ){%>
+                                    <i class="bi bi-check2-circle done"></i>
+                                    <%}%>
+                    </a>
+                </td>
+                <td>
+                    <a href="/change-status/<%=habitObj._id%>?day=3">
+                        <%if(habitObj.status[3]=="none"){%>
+                            <i class="bi bi-square  none"></i>
+                            <%}else if(habitObj.status[3]=="not-done" ){%>
+                                <i class="bi bi-x-circle not-done"></i>
+                                <%}else if(habitObj.status[3]=="done" ){%>
+                                    <i class="bi bi-check2-circle done"></i>
+                                    <%}%>
+                    </a>
+                </td>
+                <td>
+                    <a href="/change-status/<%=habitObj._id%>?day=4">
+                        <%if(habitObj.status[4]=="none"){%>
+                            <i class="bi bi-square  none"></i>
+                            <%}else if(habitObj.status[4]=="not-done" ){%>
+                                <i class="bi bi-x-circle not-done"></i>
+                                <%}else if(habitObj.status[4]=="done" ){%>
+                                    <i class="bi bi-check2-circle done"></i>
+                                    <%}%>
+                    </a>
+                </td>
+                <td>
+                    <a href="/change-status/<%=habitObj._id%>?day=5">
+                        <%if(habitObj.status[5]=="none"){%>
+                            <i class="bi bi-square  none"></i>
+                            <%}else if(habitObj.status[5]=="not-done" ){%>
+                                <i class="bi bi-x-circle not-done"></i>
+                                <%}else if(habitObj.status[5]=="done" ){%>
+                                    <i class="bi bi-check2-circle done"></i>
+                                    <%}%>
+                    </a>
+                </td>
+                <td>
+                    <a href="/change-status/<%=habitObj._id%>?day=6">
+                        <%if(habitObj.status[6]=="none"){%>
+                            <i class="bi bi-square  none"></i>
+                            <%}else if(habitObj.status[6]=="not-done" ){%>
+                                <i class="bi bi-x-circle not-done"></i>
+                                <%}else if(habitObj.status[6]=="done" ){%>
+                                    <i class="bi bi-check2-circle done"></i>
+                                    <%}%>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="../script/record-page.js"></script>
